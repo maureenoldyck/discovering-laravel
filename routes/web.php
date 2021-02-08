@@ -16,5 +16,17 @@ Route::get('/', function () {
 });
 
 Route::get('/welcome', function () {
-    return 'Hello World!';
+    return 'Hello World! 
+    <div class="links">
+        <a href="/test?name=maureen">Test</a>
+        <a href="/">Home</a>
+    </div>';
+});
+
+Route::get('/test', function () {
+
+    $name = request('name');
+    return view('test', [
+        'name' => $name
+    ]);
 });
