@@ -11016,3 +11016,7 @@ body {
   flex: 1 1 auto;
 }
 
+.alert ul {
+  list-style: none;
+}
+

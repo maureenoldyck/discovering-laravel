@@ -19,10 +19,10 @@ class FormController extends Controller
     public function store(Request $request)
     {
 
-        $validation = $request->validate([
+        $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
-            'email' => 'required',
+            'email' => 'required|email:rfc,dns',
             'question' => 'required'
         ]);
 
