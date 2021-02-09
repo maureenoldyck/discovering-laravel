@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Question;
 
 class FormController extends Controller
 {
@@ -16,9 +17,16 @@ class FormController extends Controller
     public function store()
     {
 
-        return view('form');
+        Question::create(request()->all());
+
+        return redirect('/form');
 
     }
 
+
+    public function show()
+    {
+        
+    }
 
 }
