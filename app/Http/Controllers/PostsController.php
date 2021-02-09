@@ -14,5 +14,4 @@ class PostsController extends Controller
             'post' => Post::where('slug' , $slug)->firstOrFail()
         ]);
     }
-
 }
