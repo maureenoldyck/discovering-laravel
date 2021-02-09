@@ -58,3 +58,18 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+
+.navbar {
+    background-color: $teal;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    background-color: $teal;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}

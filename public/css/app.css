@@ -10996,3 +10996,18 @@ body {
   margin-bottom: 30px;
 }
 
+.navbar {
+  background-color: #4dc0b5;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  background-color: #4dc0b5;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
