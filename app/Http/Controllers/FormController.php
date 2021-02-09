@@ -16,10 +16,17 @@ class FormController extends Controller
 
     }
 
-    public function store()
+    public function store(Request $request)
     {
 
-        Question::create(request()->all());
+        $validation = $request->validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'email' => 'required',
+            'question' => 'required'
+        ]);
+
+        App\Question::create($request->all());
 
         $alert = "Thank you for your question, we will try to get to you as quick as possible! Have a great day!";
 

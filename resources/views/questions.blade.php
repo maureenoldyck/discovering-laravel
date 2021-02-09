@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="m-5 pt-3"> 
 @foreach ($questions as $question)
 <div class="card mb-3">
     <div class="card-body">
@@ -11,5 +12,6 @@
     </div>
 </div>
 @endforeach
+</div>
 
 @endsection

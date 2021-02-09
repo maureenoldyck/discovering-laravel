@@ -7,9 +7,9 @@
 
         <title>Laravel</title>
     </head>
-    <body>
+    <body class="d-flex flex-column">
         @yield('header')
-        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <a class="navbar-brand" href="/">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -25,13 +25,13 @@
               </ul>
             </div>
         </nav>
-        <div class="flex-center position-ref full-height">
+        <div class="container-fluid flex-fill flex-center position-ref full-height">
             <div class="content">
                 @yield('content')
             </div>
          </div>
         @yield('footer')
-        <footer class="footer sticky-bottom pt-1">
+        <footer class="footer fixed-bottom pt-1">
             <p>Discovering Laravel: Made for BeCode Ghent</p>
         </footer>
     </body>
