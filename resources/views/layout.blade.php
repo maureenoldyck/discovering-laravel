@@ -64,8 +64,13 @@
         </style>
     </head>
     <body>
-        @yield('header');
-        @yield('content');
-        @yield('footer');
+        @yield('header')
+            <div class="links">
+                <a href="/test?name=maureen">Test</a>
+                <a href="/welcome">Welcome</a>
+                <a href="/posts/my-first-post">Post</a>
+            </div>
+        @yield('content')
+        @yield('footer')
     </body>
 </html>

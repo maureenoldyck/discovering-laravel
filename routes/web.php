@@ -12,16 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/welcome', function () {
-    return 'Hello World! 
-    <div class="links">
-        <a href="/test?name=maureen">Test</a>
-        <a href="/">Home</a>
-    </div>';
-});
+Route::get('/welcome', 'WelcomeController@show');
+
 
 Route::get('/test', function () {
 
