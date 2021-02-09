@@ -24,8 +24,12 @@
                 </li>
               </ul>
             </div>
-          </nav>
-        @yield('content')
+        </nav>
+        <div class="flex-center position-ref full-height">
+            <div class="content">
+                @yield('content')
+            </div>
+         </div>
         @yield('footer')
         <footer class="footer sticky-bottom pt-1">
             <p>Discovering Laravel: Made for BeCode Ghent</p>
