@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
+use App\Question;
 
 
 class FormController extends Controller
@@ -26,7 +26,7 @@ class FormController extends Controller
             'question' => 'required'
         ]);
 
-        App\Question::create($request->all());
+        Question::create($request->all());
 
         $alert = "Thank you for your question, we will try to get to you as quick as possible! Have a great day!";
 
@@ -38,7 +38,7 @@ class FormController extends Controller
     public function show()
     {
         return view('questions', [
-            'questions' => App\Question::all()
+            'questions' => Question::all()
         ]);
     }
 
