@@ -20,7 +20,7 @@
                   <a class="nav-link"  href="/welcome">Welcome</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/form">Form</a>
+                  <a class="nav-link" href="/contact">Contact</a>
                 </li>
               </ul>
             </div>

@@ -3,7 +3,7 @@
 @section('content')
 <h4> For more info about self care: </h4>
 <br>
-<form method="POST" action="/form">
+<form method="POST" action="/contact">
     @csrf
     <div class="form-row">
         <div class="form-group col-md-6">

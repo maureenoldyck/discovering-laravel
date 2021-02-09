@@ -19,14 +19,16 @@ class FormController extends Controller
 
         Question::create(request()->all());
 
-        return redirect('/form');
+        return redirect('/contact');
 
     }
 
 
     public function show()
     {
-        
+        return App\Question::all();
+
+        // return view('questions');
     }
 
 }

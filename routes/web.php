@@ -29,6 +29,7 @@ Route::get('/test', function () {
 
 Route::get('/posts/{post}', 'PostsController@show');
 
-Route::post('/form', 'FormController@store');
-Route::get('/form', 'FormController@create');
+Route::post('/contact', 'FormController@store');
+Route::get('/contact', 'FormController@create');
+Route::get('/questions', 'FormController@show');
 
