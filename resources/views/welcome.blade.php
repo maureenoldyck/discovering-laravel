@@ -88,7 +88,6 @@
                     <a href="/test?name=maureen">Test</a>
                     <a href="/welcome">Welcome</a>
                     <a href="/posts/my-first-post">Post</a>
-                   
                 </div>
             </div>
         </div>
