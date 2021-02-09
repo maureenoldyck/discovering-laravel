@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Question;
+use App;
+
 
 class FormController extends Controller
 {
+
     public function create()
     {
 
@@ -19,16 +21,18 @@ class FormController extends Controller
 
         Question::create(request()->all());
 
-        return redirect('/contact');
+        $alert = "Thank you for your question, we will try to get to you as quick as possible! Have a great day!";
+
+        return view('form')->with('alert', $alert);
 
     }
 
 
     public function show()
     {
-        return App\Question::all();
-
-        // return view('questions');
+        return view('questions', [
+            'questions' => App\Question::all()
+        ]);
     }
 
 }

@@ -1,6 +1,11 @@
 @extends('layout')
 
 @section('content')
+@if (isset($alert))
+    <div class="alert alert-success" role="alert">
+        {{$alert ?? ''}}
+    </div>
+@endif
 <h4> For more info about self care: </h4>
 <br>
 <form method="POST" action="/contact">
