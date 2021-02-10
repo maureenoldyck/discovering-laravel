@@ -14,9 +14,7 @@
 use App\Http\Controllers\WelcomeController;
 
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'SelfcareTipsController@show');
 
 Route::get('/welcome', [WelcomeController::class, 'show']);
 //Route::get('/welcome', 'WelcomeController@show');

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use DB;
-use App\Models\Post;
+use App\Model\Post;
 
 class PostsController extends Controller
 {
@@ -14,4 +14,5 @@ class PostsController extends Controller
             'post' => Post::where('slug' , $slug)->firstOrFail()
         ]);
     }
+
 }
