@@ -35,5 +35,6 @@ Route::get('/posts/{post}', 'PostsController@show');
 
 Route::post('/contact', 'FormController@store');
 Route::get('/contact', 'FormController@create');
+Route::post('/questions/{id}', 'FormController@update');
 Route::get('/questions', 'FormController@show');
 

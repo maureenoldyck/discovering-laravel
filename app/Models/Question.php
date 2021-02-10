@@ -13,4 +13,11 @@ class Question extends Model
     protected $fillable = ['firstName', 'lastName', 'email', 'question'];
 
     use HasFactory;
+
+    public function answered()
+    {
+        $this->answered = true; 
+        $this->save();
+    }
+
 }

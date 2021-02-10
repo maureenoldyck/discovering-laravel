@@ -28,6 +28,7 @@ class FormController extends Controller
 
         Question::create($request->all());
 
+
         $alert = "Thank you for your question, we will try to get to you as quick as possible! Have a great day!";
 
         return view('form')->with('alert', $alert);
@@ -40,6 +41,16 @@ class FormController extends Controller
         return view('questions', [
             'questions' => Question::all()
         ]);
+    }
+
+    public function update($id)
+    {
+
+        $question = Question::find($id);
+
+        $question->answered();
+
+        return redirect('questions');
     }
 
 }
