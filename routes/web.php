@@ -29,12 +29,12 @@ Route::get('/test', function () {
 });
 
 
-Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/posts/{post}', [App\Http\Controllers\PostsController::class, 'show']);
 
-Route::post('/contact', 'FormController@store');
-Route::get('/contact', 'FormController@create');
-Route::post('/questions/{id}', 'FormController@update');
-Route::get('/questions', 'FormController@show');
+Route::post('/contact', [App\Http\Controllers\FormController::class, 'store']);
+Route::get('/contact', [App\Http\Controllers\FormController::class, 'create']);
+Route::post('/questions/{id}', [App\Http\Controllers\FormController::class, 'update']);
+Route::get('/questions', [App\Http\Controllers\FormController::class, 'show']);
 
 
 Auth::routes();
