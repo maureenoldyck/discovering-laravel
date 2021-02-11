@@ -14,7 +14,7 @@
 use App\Http\Controllers\WelcomeController;
 
 
-Route::get('/', 'SelfcareTipsController@show');
+Route::get('/', [App\Http\Controllers\SelfcareTipsController::class, 'show']);
 
 Route::get('/welcome', [WelcomeController::class, 'show']);
 //Route::get('/welcome', 'WelcomeController@show');
@@ -36,3 +36,7 @@ Route::get('/contact', 'FormController@create');
 Route::post('/questions/{id}', 'FormController@update');
 Route::get('/questions', 'FormController@show');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
