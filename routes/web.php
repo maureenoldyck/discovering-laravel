@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +39,5 @@ Route::post('/questions/{id}', [App\Http\Controllers\FormController::class, 'upd
 Route::get('/questions', [App\Http\Controllers\FormController::class, 'show']);
 
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
