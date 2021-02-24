@@ -18,3 +18,4 @@
 <h6> <a href="http://www.theartofpureliving.com/5-minute-self-care-ideas-for-when-you-are-overwhelmed/"> Source </a></h6>
 
 @endsection
+
