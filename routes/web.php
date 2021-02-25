@@ -15,21 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\WelcomeController;
 
-
-Route::get('/', [App\Http\Controllers\SelfcareTipsController::class, 'show']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/welcome', [WelcomeController::class, 'show']);
 //Route::get('/welcome', 'WelcomeController@show');
 
-
-Route::get('/test', function () {
-
-    $name = request('name');
-    return view('test', [
-        'name' => $name
-    ]);
-});
-
+Route::get('/test', [App\Http\Controllers\SelfcareTipsController::class, 'show']);
 
 Route::get('/posts/{post}', [App\Http\Controllers\PostsController::class, 'show']);
 
@@ -48,4 +40,3 @@ Route::get('/register', [App\Http\Controllers\ProfileController::class, 'registe
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
