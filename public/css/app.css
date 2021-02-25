@@ -10056,13 +10056,12 @@ html, body {
 }
 
 .navbar {
-  background-color: #F3F2F0;
+  color: #636b6f;
 }
 
 .footer {
-  color: white;
+  color: #636b6f;
   text-align: center;
-  background-color: #F3F2F0;
 }
 
 .content {

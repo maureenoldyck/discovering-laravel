@@ -1,4 +1,6 @@
-@extends('layouts.app')
+@extends('layout')
+
+@extends('header-profile')
 
 @section('content')
 <div class="container">
@@ -21,3 +23,5 @@
     </div>
 </div>
 @endsection
+
+@extends('footer')

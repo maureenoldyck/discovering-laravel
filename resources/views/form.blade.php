@@ -1,5 +1,7 @@
 @extends('layout')
 
+@extends('header')
+
 @section('content')
 @if (isset($alert))
     <div class="alert alert-success" role="alert">
@@ -36,3 +38,4 @@
 </form>
 @endsection
 
+@extends('footer')

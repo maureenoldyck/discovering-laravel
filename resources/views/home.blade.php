@@ -1,5 +1,7 @@
 @extends('layout')
 
+@extends('header')
+
 @section('content')
 <div class="title m-b-md">
     Laravel
@@ -8,3 +10,4 @@
 
 @endsection
 
+@extends('footer')

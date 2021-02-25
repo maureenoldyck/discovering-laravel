@@ -8,12 +8,12 @@
         <title>Laravel</title>
     </head>
     <body class="d-flex flex-column">
-        @include('header')
+        @yield('header')
         <div class="container-fluid flex-fill flex-center position-ref full-height">
             <div class="content">
                 @yield('content')
             </div>
          </div>
-        @include('footer')
+        @yield('footer')
     </body>
 </html>
