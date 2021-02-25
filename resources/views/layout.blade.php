@@ -9,11 +9,7 @@
     </head>
     <body class="d-flex flex-column">
         @yield('header')
-        <div class="container-fluid flex-fill flex-center position-ref full-height">
-            <div class="content">
-                @yield('content')
-            </div>
-         </div>
+        @yield('content')
         @yield('footer')
     </body>
 </html>

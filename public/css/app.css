@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10014,7 +10015,7 @@ html, body {
 }
 
 .full-height {
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 .flex-center {
@@ -10033,12 +10034,14 @@ html, body {
   top: 18px;
 }
 
-.content {
+h1 {
+  color: #4A6258;
+  font-size: 68px;
+  line-height: 55px;
+  font-family: "Teko", sans-serif;
   text-align: center;
-}
-
-.title {
-  font-size: 84px;
+  border: 5px solid #4A6258;
+  padding: 15px;
 }
 
 .links > a {
@@ -10055,13 +10058,10 @@ html, body {
   margin-bottom: 30px;
 }
 
-.navbar {
-  color: #636b6f;
-}
-
 .footer {
   color: #636b6f;
   text-align: center;
+  background-color: #F3F2F0;
 }
 
 .content {
@@ -10076,4 +10076,10 @@ html, body {
 
 .alert ul {
   list-style: none;
+}
+
+.title-container {
+  background: url("/images/homepageimage.jpeg");
+  background-size: cover;
+  background-position: center bottom;
 }
