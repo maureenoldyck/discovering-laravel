@@ -21,4 +21,4 @@
 
 @endsection
 
-@extends('header')
+@extends('footer')
