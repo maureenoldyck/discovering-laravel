@@ -3,6 +3,8 @@
 @extends('header')
 
 @section('content')
+<div class="content container-fluid flex-column mt-5"> 
+
 @if (isset($alert))
     <div class="alert alert-success" role="alert">
         {{$alert ?? ''}}
@@ -16,6 +18,7 @@
         </ul>
     </div>
 @endif
+
 <h4> For more info about self care: </h4>
 <br>
 <form method="POST" action="/contact">
@@ -36,6 +39,8 @@
     </div>
     <button type="submit" class="btn btn-info">Send</button>
 </form>
+</div>
+
 @endsection
 
 @extends('footer')
