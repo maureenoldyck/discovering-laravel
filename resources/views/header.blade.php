@@ -17,7 +17,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ">
-          <a class="nav-link" href="/profile">Profile</a>
+          <a class="nav-link profile-button" href="/profile">Profile</a>
         </li>
       </ul>
     </div>
