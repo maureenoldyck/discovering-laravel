@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Traits\UploadTrait;
 use App\Models\User;
+use Illuminate\Support\Str;
+
 
 class ProfileController extends Controller
 {
@@ -44,14 +46,13 @@ class ProfileController extends Controller
     {
         // Form validation
         $request->validate([
-            'name'              =>  'required',
             'profile_image'     =>  'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
 
         // Get current user
         $user = User::findOrFail(auth()->user()->id);
         // Set user name
-        $user->name = $request->input('name');
+        $user->name = auth()->user()->name;
 
         // Check if a profile image has been uploaded
         if ($request->has('profile_image')) {
