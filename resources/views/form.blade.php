@@ -37,7 +37,7 @@
     <div class="form-group">
         <textarea class="form-control" name="question" id="inputQuestion" rows="3" placeholder="Your Question"></textarea>   
     </div>
-    <button type="submit" class="btn btn-info">Send</button>
+    <button type="submit" class="btn btn-secondary">Send</button>
 </form>
 </div>
 
