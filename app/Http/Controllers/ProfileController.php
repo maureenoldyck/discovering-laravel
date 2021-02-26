@@ -32,7 +32,7 @@ class ProfileController extends Controller
     public function index()
     {
         return view('profile', [
-            'posts' => Post::all()
+            'posts' => Post::where('user_id', auth()->id())->get()
         ]);
     }
 
@@ -49,9 +49,7 @@ class ProfileController extends Controller
 
         $createPost->save();
 
-        return view('profile', [
-            'posts' => Post::all()
-        ]);
+        return redirect('/profile');
     }
 
     public function login()

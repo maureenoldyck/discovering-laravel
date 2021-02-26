@@ -37,16 +37,24 @@
                             </form>
                         </div>
                         <div class="col-8 border">
+                            <h4> Your Self Care Diary: </h4>
                             <form method="POST" action="{{ route('profile.post') }}">
                                 @csrf
                                 <div class="form-group">
-                                    <textarea class="form-control" name="post" rows="3" placeholder="Your Entry"></textarea>   
+                                    <textarea class="form-control" name="post" rows="3" placeholder="Your Self Care Entry"></textarea>   
                                 </div>
                                 <button type="submit" class="btn btn-secondary">Send</button>
                             </form>
+                            @foreach ($posts as $post)
+                            <div class="card post mb-3">
+                                <div class="card-body">
+                                    <p class="card-text">{{$post->post}} </p>
+                                    <p class="card-text"><small class="text-muted">Published on: {{$post->created_at}}</small></p>
+                                </div>
                             </div>
+                            @endforeach
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
