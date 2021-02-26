@@ -22,3 +22,7 @@
 * Laracast </li>
 * TablePlus </li>
 * Unsplash for all images </li>
+
+
+## 📝 To Do: 
+* Make responsive 

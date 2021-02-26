@@ -93,7 +93,7 @@ class ProfileController extends Controller
         $user->save();
 
         // Return user back and show a flash message
-        return redirect()->back()->with(['status' => 'Profile updated successfully.']);
+        return redirect()->back();
     }
 
 }

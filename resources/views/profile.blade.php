@@ -36,20 +36,31 @@
                             </div>
                             </form>
                         </div>
-                        <div class="col-8 border">
+                        <div class="col-8">
                             <h4> Your Self Care Diary: </h4>
                             <form method="POST" action="{{ route('profile.post') }}">
                                 @csrf
                                 <div class="form-group">
                                     <textarea class="form-control" name="post" rows="3" placeholder="Your Self Care Entry"></textarea>   
                                 </div>
-                                <button type="submit" class="btn btn-secondary">Send</button>
+                                <button type="submit" class="btn btn-secondary mb-5">Post</button>
                             </form>
                             @foreach ($posts as $post)
                             <div class="card post mb-3">
-                                <div class="card-body">
-                                    <p class="card-text">{{$post->post}} </p>
-                                    <p class="card-text"><small class="text-muted">Published on: {{$post->created_at}}</small></p>
+                                <div class="row no-gutters">
+                                    <div class="col-2 align-self-center justify-content-center">
+                                        @if (auth()->user()->image)
+                                        <img class="w-50 " src="{{ asset(auth()->user()->image) }}">
+                                        @endif
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="card-block px-2">
+                                            <div class="card-body">
+                                                <p class="card-text text-left">{{$post->post}} </p>
+                                                <p class="card-text"><small class="text-muted">Published on: {{$post->created_at}}</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             @endforeach
