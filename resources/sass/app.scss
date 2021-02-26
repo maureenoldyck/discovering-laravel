@@ -7,6 +7,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+//GENERAL
+
 html, body {
     background-color: #F3F2F0;
     color: #636b6f;
@@ -15,6 +17,24 @@ html, body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
+}
+
+h1 {
+    color: #4A6258;
+    font-size: 60px;
+    line-height: 55px;
+    font-family: 'Teko', sans-serif;
+    border: 4px solid #4A6258;
+    padding: 15px;
+    text-align: center;
+}
+
+h4 {
+    color: #AF6D4F;
+}
+
+h5 {
+    color: #AF6D4F;
 }
 
 .full-height {
@@ -37,21 +57,6 @@ html, body {
     top: 18px;
 }
 
-h1 {
-    color: #4A6258;
-    font-size: 60px;
-    line-height: 55px;
-    font-family: 'Teko', sans-serif;
-    border: 4px solid #4A6258;
-    padding: 15px;
-    text-align: center;
-}
-
-h4 {
-    color: #AF6D4F;
-}
-
-
 .links > a {
     color: #636b6f;
     padding: 0 25px;
@@ -66,33 +71,16 @@ h4 {
     margin-bottom: 30px;
 }
 
-.footer {
-    color: #636b6f;
-    text-align: center;
-    background-color:#F3F2F0;
-}
-
-.card {
-    box-shadow: 5px 10px 18px #888888;
-}
-
-.card-title {
-    color: #4A6258
-}
-
-.title-line {
-    width: 20%;
-    border-top: 1px solid #AF6D4F;
-}
-
-h5 {
-    color: #AF6D4F;
-}
-
 .content {
     width: 80%;
     margin: 0 auto;
     text-align: center;
+}
+
+
+.title-line {
+    width: 20%;
+    border-top: 1px solid #AF6D4F;
 }
 
 .flex-fill {
@@ -105,16 +93,42 @@ h5 {
     }
   }
 
-  .title-container {
+//CARD
+
+.card {
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.card-title {
+    color: #4A6258
+}
+
+.btn {
+    background-color: #4A6258;
+}
+
+//FOOTER
+
+.footer {
+    color: #636b6f;
+    text-align: center;
+    background-color:#F3F2F0;
+}
+
+// TITLE HOME PAGE 
+
+.title-container {
     background: url("/images/homepageimage.jpeg");
     background-position: right top;
-  }
+}
 
 .flex-container {
     display:flex;
     background-color: white;
     height: 90vh;
 }
+
+// BOTTOM HOME PAGE
 
 .left-side {
 
@@ -129,14 +143,6 @@ h5 {
     p {
         padding: 25px;
     }
-}
-
-.profile-button {
-    border: 1px solid #AF6D4F;
-}
-
-.btn {
-    background-color: #4A6258;
 }
 
 .about-container {
@@ -157,6 +163,13 @@ h5 {
     li {
         text-align: left;
     }
+}
+
+
+//PROFILE 
+
+.profile-button {
+    border: 1px solid #AF6D4F;
 }
 
 .container-profile {

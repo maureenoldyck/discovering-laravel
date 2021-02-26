@@ -9,17 +9,17 @@
 <div class="content container-fluid full-height mt-5 pt-5">
     <h4 class="m-b-md"> If you read this, take 5 minutes for self care!</h4>
     <div class="flex-center">
-    <div class="card-deck">
-        @foreach ($tips as $tip)
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{$tip->title}}</h5>
-                    <hr class="title-line">
-                    <p class="card-text">{{$tip->body}}</p>
+        <div class="card-deck">
+            @foreach ($tips as $tip)
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$tip->title}}</h5>
+                        <hr class="title-line">
+                        <p class="card-text">{{$tip->body}}</p>
+                    </div>
                 </div>
-            </div>
-        @endforeach
-    </div>
+            @endforeach
+        </div>
     </div>
 </div>
 <div class="flex-container">
@@ -33,9 +33,6 @@
             ‘Self-Care is what people do for themselves to establish and maintain health, and to prevent and deal with illness. It is a broad concept encompassing hygiene (general and personal), nutrition (type and quality of food eaten), lifestyle (sporting activities, leisure etc), environmental factors (living conditions, social habits, etc.) socio-economic factors (income level, cultural beliefs, etc.) and self-medication.’</p>
     </div>
 </div>
-
-
-
 @endsection
 
 @extends('footer')

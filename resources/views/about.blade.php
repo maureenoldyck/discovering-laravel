@@ -9,7 +9,7 @@
         <br>
         <h5> Mission: </h5>
         <p>
-        Create a small website to discover as much of the framework: Laravel.  For this task we could use any documents we wanted, I used the video tutorials on Laracast and the official documentation. 
+            Create a small website to discover as much of the framework: Laravel.  For this task we could use any documents we wanted, I used the video tutorials on Laracast and the official documentation. 
         </p>
         <h5> Learning Objectives: </h5>
         <p> 
