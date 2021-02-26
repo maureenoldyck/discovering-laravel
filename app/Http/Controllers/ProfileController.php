@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Traits\UploadTrait;
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 
 class ProfileController extends Controller
@@ -29,7 +31,27 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile');
+        return view('profile', [
+            'posts' => Post::all()
+        ]);
+    }
+
+    public function newPost(Request $request)
+    {
+        $post = $request->validate([
+            'post' => 'required',
+        ]);
+
+        $createPost = new Post;
+
+        $createPost->post = $request->post;
+        $createPost->user_id = Auth::id();
+
+        $createPost->save();
+
+        return view('profile', [
+            'posts' => Post::all()
+        ]);
     }
 
     public function login()

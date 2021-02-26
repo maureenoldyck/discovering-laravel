@@ -3,7 +3,8 @@
 @extends('header-profile')
 
 @section('content')
-<div class="container mt-5">
+<div class="container">
+<div class="container-profile mt-5">
     @if ($errors->any())
     <div class="alert alert-danger alert-dismissible" role="alert">
         <ul>
@@ -33,15 +34,24 @@
                                     <button type="submit" class="btn btn-primary">Update Profile</button>
                                 </div>
                             </div>
+                            </form>
                         </div>
                         <div class="col-8 border">
-                          2-2
+                            <form method="POST" action="{{ route('profile.post') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <textarea class="form-control" name="post" rows="3" placeholder="Your Entry"></textarea>   
+                                </div>
+                                <button type="submit" class="btn btn-secondary">Send</button>
+                            </form>
+                            </div>
                         </div>
                       </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
 

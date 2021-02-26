@@ -10151,3 +10151,11 @@ h5 {
 .about-content li {
   text-align: left;
 }
+
+.container-profile {
+  padding-bottom: 100px;
+  width: 100%;
+}
+.container-profile img {
+  width: 60%;
+}
