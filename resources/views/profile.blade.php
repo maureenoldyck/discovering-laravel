@@ -23,18 +23,34 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4 border">
-                            @if (auth()->user()->image)
-                                <img class="card-img-top" src="{{ asset(auth()->user()->image) }}">
-                            @endif
-                            <form action="{{ route('profile.update') }}" method="POST" role="form" enctype="multipart/form-data">
-                            @csrf
-                            <input id="profile_image" type="file" class="form-control" name="profile_image">
-                            <div class="form-group row mb-0 mt-5">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                            <div class="picture-container mb-5">
+                                <div class="picture">
+                                    @if (auth()->user()->image)
+                                    <img class="card-img-top w-50" src="{{ asset(auth()->user()->image) }}">
+                                    @endif                                        
+                                </div>
+                                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <h6 class="">Change Picture</h6>
+                                </a>
+                                <div class="collapse" id="collapseExample">
+                                    <form action="{{ route('profile.update') }}" method="POST" role="form" enctype="multipart/form-data">
+                                        @csrf
+                                        <input id="profile_image" type="file" class="form-control" name="profile_image">
+                                        <button type="submit" class="btn btn-primary mt-3">Update Profile</button>
+                                    </form>
                                 </div>
                             </div>
-                            </form>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                  Your Timeline
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Your Friends 
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Your Activities</a>
+                                <a href="#" class="list-group-item list-group-item-action">Your Challenges</a>
+                                <a href="#" class="list-group-item list-group-item-action">Inspire me!</a>
+                            </div>
                         </div>
                         <div class="col-8">
                             <h4> Your Self Care Diary: </h4>

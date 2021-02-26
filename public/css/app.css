@@ -10163,3 +10163,12 @@ h5 {
 .post {
   box-shadow: 0px 0px 0px #888888;
 }
+
+.badge-pill {
+  background-color: #4A6258;
+}
+
+.list-group-item-action.active {
+  background-color: #AF6D4F;
+  border-color: #AF6D4F;
+}
